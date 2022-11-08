@@ -1,0 +1,16 @@
+Zad. 1. [3+2p] Napisać w Scala rekurencyjną funkcję znajdującą minimalną
+i maksymalną wartość w każdej liście umieszczonej w liście list.
+Wynik umieścić w liście par składających się z minimalnych i maksymalnych wartości.
+Napisać następnie równoważną funkcję z jednokrotnym wykorzystaniem funkcjonałów map i foldLeft.
+
+Zad. 2. [3p] Napisać w OCaml funkcję typu (float -> float) -> float -> float -> float -> float
+wyznaczającą w przedziale [a,b] pole pomiędzy krzywą zadaną poprzez funkcję a osią x układu współrzędnych.
+Pole przybliżyć poprzez sumę pól trapezów mieszczących się między krzywą a osią x.
+Liczba trapezów określona jest poprzez zadany w ramach przedziału krok dx
+(dx dużo mniejsze od długości przedziału). W rozwiązaniu wykorzystać funkcjonał fold_right.
+
+Zad. 3. [2p] Wyznaczyć w Scala wartość g’(f’(x)) dla zadanego x.
+Funkcje f i g są dowolnymi wcześniej zdefiniowanymi funkcjami wykorzystującymi wielomian
+i funkcje trygonometryczne lub logarytm. Uwzględnić fakt,
+że wartość ilorazu  różnicowego jest przybliżeniem wartości pochodnej funkcji.
+Iloraz różnicowy należy specjalizować dla dx=0.0000001.
