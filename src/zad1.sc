@@ -24,12 +24,22 @@ def findMinMax(list:List[List[Double]]):List[(Double,Double)] = {
   findMinMax_rec(list, Nil).reverse
 }
 
-findMinMax(List(List(1,5,9,2,3), List(9,9,9,8,3), List(), List(5,4,6)));
-findMinMax(List(List(1,5,9,2,3), List(9,9,9,8,3), List(1), List(5,4,6)));
+//findMinMax(List(List(1,5,9,2,3), List(9,9,9,8,3), List(), List(5,4,6)));
+//findMinMax(List(List(1,5,9,2,3), List(9,9,9,8,3), List(1), List(5,4,6)));
 
-/* def findMinMax_fold(list:List[List[Double]]):List[(Double,Double)] = {
-  list map(list.head foldLeft(0))()
+def findMinMax_fold(list:List[List[Double]]):List[(Double,Double)] = {
+  list.map((element: List[Double]) =>
+    element.foldLeft((element.head, element.head))((prev: (Double, Double), head: Double) => {
+      if head < prev._1 then (head, prev._2)
+      else if head > prev._2 then (prev._1, head)
+      else prev
+    }
+    )
+  )
 }
-*/
+
+//findMinMax_fold(List(List(1,5,9,2,3), List(9,9,9,8,3), List(), List(5,4,6)));
+findMinMax_fold(List(List(1,5,9,2,3), List(9,9,9,8,3), List(1), List(5,4,6)));
+
 
 //List(1, 2, 3, 4, 5) foldLeft((0,0))()
